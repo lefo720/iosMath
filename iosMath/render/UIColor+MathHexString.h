@@ -8,7 +8,7 @@
 
 #if TARGET_OS_IPHONE
 
-@interface UIColor (HexString)
+@interface UIColor (MathHexString)
 
 + (UIColor *)colorFromHexString:(NSString *)hexString;
 

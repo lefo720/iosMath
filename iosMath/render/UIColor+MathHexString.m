@@ -6,11 +6,11 @@
 //
 //
 
-#import "UIColor+HexString.h"
+#import "UIColor+MathHexString.h"
 
 #if TARGET_OS_IPHONE
 
-@implementation UIColor (HexString)
+@implementation UIColor (MathHexString)
 
 + (UIColor *)colorFromHexString:(NSString *)hexString {
     if ([hexString isEqualToString:@""]) {
