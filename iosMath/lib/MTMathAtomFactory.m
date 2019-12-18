@@ -82,6 +82,9 @@ NSString *const MTSymbolDegree = @"\u00B0"; // \circ
     if (ch > 0x0410 && ch < 0x044F){
         // show basic cyrillic alphabet. Latin Modern Math font is not good for cyrillic symbols
         return [MTMathAtom atomWithType:kMTMathAtomOrdinary value:chStr];
+    } else if ((ch >= 0x4E00) && (ch <= 0x9FFF)) {
+        // CJK support.
+        return [MTMathAtom atomWithType:kMTMathAtomOrdinary value:chStr];
     } else if (ch < 0x21 || ch > 0x7E) {
         // skip non ascii characters and spaces
         return nil;
